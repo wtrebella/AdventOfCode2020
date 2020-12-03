@@ -2,9 +2,15 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <unistd.h>
 
 using namespace std;
 
+// day 1
+void getNumsThatAddToVal(int &a, int &b, int val, vector<int> &nums);
+void getNumsThatAddToVal(int &a, int &b, int &c, int val, vector<int> &nums);
+
+// day 2
 struct PasswordEntry
 {
     char specialChar;
@@ -13,17 +19,16 @@ struct PasswordEntry
     string password;
 };
 
-// day 2
 void removeInvalidEntries(vector<PasswordEntry> &entries, bool validation (PasswordEntry));
 vector<int> parseListOfInts(string path);
 vector<PasswordEntry> parsePasswordEntries(string path);
 bool isValidForPuz1(PasswordEntry entry);
 bool isValidForPuz2(PasswordEntry entry);
 
-// day 1
-void getNumsThatAddToVal(int &a, int &b, int val, vector<int> &nums);
-void getNumsThatAddToVal(int &a, int &b, int &c, int val, vector<int> &nums);
+// day 3
+const int DAY3_COURSE_WIDTH = 31;
 
+vector<vector<char>> getTobogganCourse(string path);
 
 
 int main()
@@ -59,7 +64,38 @@ int main()
 
     cout << "Day 2 Puzzle 2: number of valid passwords = " << puz2validEntries.size() << endl;
 
+    // Day 3 Puzzle 1
+    vector<vector<char>> course = getTobogganCourse("data/day3.txt");
+    
     return 0;
+}
+
+vector<vector<char>> getTobogganCourse(string path)
+{
+    string line;
+    ifstream file(path);
+    vector<vector<char>> course;
+    if (file.is_open())
+    {
+        while (getline(file, line))
+        {
+            vector<char> lineVect(line.begin(), line.end());
+            course.push_back(lineVect);
+            
+            for (int i = 0; i < lineVect.size(); i++)
+            {
+                char c = lineVect[i];
+                cout << c;
+                
+                if (i == DAY3_COURSE_WIDTH - 1)
+                {
+                    cout << endl;
+                }
+            }
+        }
+    }
+
+    return course;
 }
 
 void removeInvalidEntries(vector<PasswordEntry> &entries, bool validation (PasswordEntry))
@@ -106,7 +142,7 @@ vector<PasswordEntry> parsePasswordEntries(string path)
         while (getline(file, line))
         {
             string temp, numRule, password;
-            char specialChar;
+            char specialChar = ' ';
             int step = 0;
 
             for (string::iterator it = line.begin(); it != line.end(); ++it)
