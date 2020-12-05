@@ -98,7 +98,7 @@ int main()
 
     cout << "Day 3 Puzzle 1: number of trees = " << numTreesPuz1 << endl;
 
-    int numTrees1 = 0;
+    int numTrees1 = 0; 
     traverseCourse(0, 0, 1, 1, numTrees1, course, courseTemplate);
 
     int numTrees2 = 0;
@@ -137,7 +137,7 @@ int main()
         {
             numValidPassports++;
         }
-        printPassport(passports[i], true);
+        //printPassport(passports[i], true);
     }
     cout << "Day 4 Puzzle 2: number of valid passports = " << numValidPassports << endl;
     return 0;
@@ -164,7 +164,7 @@ void printPassport(PassportData p, bool validateFields)
         DAY4_HCL << ":" << entryExists(p, DAY4_HCL) << " " <<
         DAY4_ECL << ":" << entryExists(p, DAY4_ECL) << " " <<
         DAY4_PID << ":" << entryExists(p, DAY4_PID) << " " <<
-        DAY4_CID << ":" << entryExists(p, DAY4_CID) << endl;
+        DAY4_CID << ":" << entryExists(p, DAY4_CID) << endl;  
 }
 
 bool isPassportValid(PassportData p, bool validateFields)
@@ -294,14 +294,15 @@ bool isPassportValid(PassportData p, bool validateFields)
 
     // validate eye color
     string ecl = p[DAY4_ECL];
+    const char* eclCStr = ecl.c_str();
     if (
-        !strcmp(ecl.c_str(), "amb") &&
-        !strcmp(ecl.c_str(), "blu") &&
-        !strcmp(ecl.c_str(), "brn") &&
-        !strcmp(ecl.c_str(), "gry") &&
-        !strcmp(ecl.c_str(), "grn") &&
-        !strcmp(ecl.c_str(), "hzl") &&
-        !strcmp(ecl.c_str(), "oth")
+        strcmp(eclCStr, "amb") != 0 &&
+        strcmp(eclCStr, "blu") != 0 &&
+        strcmp(eclCStr, "brn") != 0 &&
+        strcmp(eclCStr, "gry") != 0 &&
+        strcmp(eclCStr, "grn") != 0 &&
+        strcmp(eclCStr, "hzl") != 0 &&
+        strcmp(eclCStr, "oth")
         )
     {
         return false;
@@ -313,6 +314,7 @@ bool isPassportValid(PassportData p, bool validateFields)
     {
         return false;
     }
+
     return true;
 }
 
