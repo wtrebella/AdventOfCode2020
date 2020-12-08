@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		B0D448142578CD720070C01B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0D448132578CD720070C01B /* main.cpp */; };
+		B0D4481D257F68840070C01B /* day1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0D4481B257F68840070C01B /* day1.cpp */; };
+		B0D44820257F6A130070C01B /* day2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0D4481E257F6A130070C01B /* day2.cpp */; };
+		B0D44823257F6A220070C01B /* day3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0D44821257F6A220070C01B /* day3.cpp */; };
+		B0D44826257F6A290070C01B /* day4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0D44824257F6A290070C01B /* day4.cpp */; };
+		B0D44829257F6A310070C01B /* day5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0D44827257F6A310070C01B /* day5.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +31,17 @@
 		B0D448102578CD720070C01B /* AdventOfCode2020 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AdventOfCode2020; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0D448132578CD720070C01B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		B0D4481A2578CF3B0070C01B /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = data; sourceTree = "<group>"; };
+		B0D4481B257F68840070C01B /* day1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = day1.cpp; sourceTree = "<group>"; };
+		B0D4481C257F68840070C01B /* day1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = day1.h; sourceTree = "<group>"; };
+		B0D4481E257F6A130070C01B /* day2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = day2.cpp; sourceTree = "<group>"; };
+		B0D4481F257F6A130070C01B /* day2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = day2.h; sourceTree = "<group>"; };
+		B0D44821257F6A220070C01B /* day3.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = day3.cpp; sourceTree = "<group>"; };
+		B0D44822257F6A220070C01B /* day3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = day3.h; sourceTree = "<group>"; };
+		B0D44824257F6A290070C01B /* day4.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = day4.cpp; sourceTree = "<group>"; };
+		B0D44825257F6A290070C01B /* day4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = day4.h; sourceTree = "<group>"; };
+		B0D44827257F6A310070C01B /* day5.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = day5.cpp; sourceTree = "<group>"; };
+		B0D44828257F6A310070C01B /* day5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = day5.h; sourceTree = "<group>"; };
+		B0D4482B257F7DBD0070C01B /* main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +59,18 @@
 			isa = PBXGroup;
 			children = (
 				B0D4481A2578CF3B0070C01B /* data */,
+				B0D4482B257F7DBD0070C01B /* main.h */,
 				B0D448132578CD720070C01B /* main.cpp */,
+				B0D4481C257F68840070C01B /* day1.h */,
+				B0D4481B257F68840070C01B /* day1.cpp */,
+				B0D4481F257F6A130070C01B /* day2.h */,
+				B0D4481E257F6A130070C01B /* day2.cpp */,
+				B0D44822257F6A220070C01B /* day3.h */,
+				B0D44821257F6A220070C01B /* day3.cpp */,
+				B0D44825257F6A290070C01B /* day4.h */,
+				B0D44824257F6A290070C01B /* day4.cpp */,
+				B0D44828257F6A310070C01B /* day5.h */,
+				B0D44827257F6A310070C01B /* day5.cpp */,
 				B0D448112578CD720070C01B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -113,7 +140,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0D4481D257F68840070C01B /* day1.cpp in Sources */,
 				B0D448142578CD720070C01B /* main.cpp in Sources */,
+				B0D44829257F6A310070C01B /* day5.cpp in Sources */,
+				B0D44823257F6A220070C01B /* day3.cpp in Sources */,
+				B0D44826257F6A290070C01B /* day4.cpp in Sources */,
+				B0D44820257F6A130070C01B /* day2.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
