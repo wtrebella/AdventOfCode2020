@@ -7,6 +7,7 @@
 #include <iostream>
 #include <fstream>
 
+const std::string DAY4_PATH = "data/day4.txt";
 const std::string DAY4_BYR = "byr";
 const std::string DAY4_IYR = "iyr";
 const std::string DAY4_EYR = "eyr";
@@ -23,5 +24,6 @@ std::vector<PassportData> parsePassportData(std::string path);
 bool isPassportValid(PassportData p, bool validateFields);
 bool entryExists(PassportData p, std::string key);
 void printPassport(PassportData p, bool validateFields);
+void runDay4();
 
 #endif

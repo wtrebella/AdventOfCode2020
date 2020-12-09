@@ -2,6 +2,42 @@
 
 using namespace std;
 
+void runDay4()
+{
+    // puzzle 1
+
+    vector<PassportData> passports = parsePassportData(DAY4_PATH);
+    int numValidPassports = 0;
+
+    for (int i = 0; i < (int)passports.size(); i++)
+    {
+        if (isPassportValid(passports[i], false))
+        {
+            numValidPassports++;
+        }
+    }
+
+    cout << "Day 4" << endl;
+    cout << "=================================================" << endl;
+    cout << "  Puzzle 1" << endl;
+    cout << "    number of valid passports = " << numValidPassports << endl;
+
+    // puzzle 2
+
+    numValidPassports = 0;
+    for (int i = 0; i < (int)passports.size(); i++)
+    {
+        if (isPassportValid(passports[i], true))
+        {
+            numValidPassports++;
+        }
+    }
+    cout << "  Puzzle 2" << endl;
+    cout << "    number of valid passports = " << numValidPassports << endl;
+    cout << "=================================================" << endl;
+    cout << endl;
+}
+
 void printPassport(PassportData p, bool validateFields)
 {
     string validity;
@@ -222,7 +258,7 @@ vector<PassportData> parsePassportData(string path)
             else
             {
                 vector<string> tokens = splitString(line, " ");
-                for (int i = 0; i < tokens.size(); i++)
+                for (int i = 0; i < (int)tokens.size(); i++)
                 {
                     string t = tokens[i];
                     vector<string> kvp = splitString(t, ":");

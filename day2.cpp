@@ -2,6 +2,30 @@
 
 using namespace std;
 
+void runDay2()
+{
+    // puzzle 1
+    vector <PasswordEntry> passwordEntries = parsePasswordEntries(DAY2_PATH);
+    vector <PasswordEntry> puz1validEntries = passwordEntries;
+
+    removeInvalidEntries(puz1validEntries, isValidForPuz1);
+
+    cout << "Day 2" << endl;
+    cout << "=================================================" << endl;
+    cout << "  Puzzle 1" << endl;
+    cout << "    number of valid passwords = " << (int)puz1validEntries.size() << endl;
+
+    // puzzle 2
+    vector <PasswordEntry> puz2validEntries = passwordEntries;
+
+    removeInvalidEntries(puz2validEntries, isValidForPuz2);
+
+    cout << "  Puzzle 2" << endl;
+    cout << "    number of valid passwords = " << (int)puz2validEntries.size() << endl;
+    cout << "=================================================" << endl;
+    cout << endl;
+}
+
 void removeInvalidEntries(vector<PasswordEntry> &entries, bool validation (PasswordEntry))
 {
     auto it = entries.begin();
@@ -22,7 +46,7 @@ void removeInvalidEntries(vector<PasswordEntry> &entries, bool validation (Passw
 bool isValidForPuz1(PasswordEntry entry)
 {
     size_t n = count(entry.password.begin(), entry.password.end(), entry.specialChar);
-    return n >= entry.val1 && n <= entry.val2;
+    return n >= (size_t)entry.val1 && n <= (size_t)entry.val2;
 }
 
 bool isValidForPuz2(PasswordEntry entry)
@@ -100,26 +124,3 @@ vector<PasswordEntry> parsePasswordEntries(string path)
 
     return entries;
 }
-
-vector<int> parseListOfInts(string path)
-{
-    string line;
-    vector<int> nums;
-    ifstream file(path);
-    if (file.is_open())
-    {
-        while (getline(file, line))
-        {
-            int num = stoi(line);
-            nums.push_back(num);
-        }
-        file.close();
-    }
-    else
-    {
-        cout << "Unable to open file";
-    }
-
-    return nums;
-}
-
