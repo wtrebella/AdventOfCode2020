@@ -1,5 +1,5 @@
-#ifndef day4_hpp
-#define day4_hpp
+#ifndef day4_h
+#define day4_h
 
 #include <string>
 #include <unordered_map>

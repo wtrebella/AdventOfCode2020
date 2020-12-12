@@ -1,5 +1,5 @@
-#ifndef day1_hpp
-#define day1_hpp
+#ifndef day1_h
+#define day1_h
 
 #include <vector>
 #include <string>

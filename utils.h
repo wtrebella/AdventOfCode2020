@@ -1,5 +1,5 @@
-#ifndef utils_hpp
-#define utils_hpp
+#ifndef utils_h
+#define utils_h
 
 #include <vector>
 #include <string>
