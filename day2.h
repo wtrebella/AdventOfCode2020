@@ -11,8 +11,8 @@ const std::string DAY2_PATH = "data/day2.txt";
 struct PasswordEntry
 {
     char specialChar = ' ';
-    int val1;
-    int val2;
+    int val1 = 0;
+    int val2 = 0;
     std::string password;
 };
 

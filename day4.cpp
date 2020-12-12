@@ -1,3 +1,4 @@
+#include "utils.h"
 #include "day4.h"
 
 using namespace std;
@@ -218,25 +219,6 @@ bool entryExists(PassportData p, string key)
     return p.find(key) != p.end();
 }
 
-vector<string> splitString(string s, string delimiter)
-{
-    vector<string> v;
-
-    size_t pos = 0;
-    string token;
-    while ((pos = s.find(delimiter)) != string::npos)
-    {
-        token = s.substr(0, pos);
-        s.erase(0, pos + delimiter.length());
-        v.push_back(token);
-    }
-    if (!s.empty())
-    {
-        v.push_back(s);
-    }
-
-    return v;
-}
 
 vector<PassportData> parsePassportData(string path)
 {

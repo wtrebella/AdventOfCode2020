@@ -19,7 +19,6 @@ const std::string DAY4_CID = "cid";
 
 typedef std::unordered_map<std::string, std::string> PassportData;
 
-std::vector<std::string> splitString(std::string s, std::string delimiter);
 std::vector<PassportData> parsePassportData(std::string path);
 bool isPassportValid(PassportData p, bool validateFields);
 bool entryExists(PassportData p, std::string key);

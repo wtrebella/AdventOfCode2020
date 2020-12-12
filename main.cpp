@@ -1,3 +1,4 @@
+#include "utils.h"
 #include "main.h"
 #include "day1.h"
 #include "day2.h"
@@ -6,7 +7,6 @@
 #include "day5.h"
 
 using namespace std;
-
 
 int main()
 {

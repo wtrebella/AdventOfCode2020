@@ -17,8 +17,6 @@ struct Seat
 const std::string DAY5_PATH = "data/day5.txt";
 
 std::vector<std::string> splitBoardingPass(std::string boardingPass);
-std::string intToBinaryString(int i);
-int stringToBinary(std::string s);
 int getRow(std::string rowString);
 int getColumn(std::string columnString);
 int getSeatID(int row, int column);

@@ -1,3 +1,4 @@
+#include "utils.h"
 #include "day1.h"
 
 using namespace std;
@@ -86,26 +87,4 @@ void getNumsThatAddToVal(int &a, int &b, int &c, int val, vector<int> &nums)
             }
         }
     }
-}
-
-vector<int> parseListOfInts(string path)
-{
-    string line;
-    vector<int> nums;
-    ifstream file(path);
-    if (file.is_open())
-    {
-        while (getline(file, line))
-        {
-            int num = stoi(line);
-            nums.push_back(num);
-        }
-        file.close();
-    }
-    else
-    {
-        cout << "Unable to open file";
-    }
-
-    return nums;
 }
