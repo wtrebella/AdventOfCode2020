@@ -65,7 +65,7 @@ int stringToBinary(std::string s)
     return b;
 }
 
-string intToBinaryString(int num)
+string intTo8BitBinaryString(int num)
 {
     int lostData = 4294967295 - 255; //11111111111111111111111100000000
 
@@ -85,4 +85,37 @@ string intToBinaryString(int num)
     }
 
     return s;
+}
+
+string intTo32BitBinaryString(int num)
+{
+    string s(32, ' ');
+
+    for (int i = 31; i >= 0; i--)
+    {
+        int cIndex = 32 - i - 1;
+
+        s[cIndex] = (1 << i) & num ? '1' : '0';
+    }
+
+    return s;
+}
+
+bool stringContainsChar(string s, char c)
+{
+    return s.find(c) != string::npos;
+}
+
+int getNumSetBits(int num)
+{
+    int count = 0;
+    for (int i = 0; i < 32; i++)
+    {
+        if (num & (1 << i))
+        {
+            count++;
+        }
+    }
+
+    return count;
 }
